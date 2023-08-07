@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 
 import short_links
 
-if __name__ == "__main__":
+
+def main():
     load_dotenv()
 
     btl_token = os.environ["BTL_TOKEN"]
@@ -26,3 +27,7 @@ if __name__ == "__main__":
         )
     else:
         print("Bitlink: {}".format(short_links.shorten_link(url, btl_token)))
+
+
+if __name__ == "__main__":
+    main()
